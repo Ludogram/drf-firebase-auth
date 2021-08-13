@@ -33,7 +33,9 @@ DEFAULTS = {
         os.getenv('FIREBASE_AUTH_EMAIL_VERIFICATION', False),
     # function should accept firebase_admin.auth.UserRecord as argument
     # and return str
-    'FIREBASE_USERNAME_MAPPING_FUNC': map_firebase_uid_to_username
+    'FIREBASE_USERNAME_MAPPING_FUNC': map_firebase_uid_to_username,
+    # Don't fetch the user from firebase
+    'FIREBASE_SKIP_FETCH_USER': os.getenv('FIREBASE_SKIP_FETCH_USER', False)
 }
 
 # List of settings that may be in string import notation.
